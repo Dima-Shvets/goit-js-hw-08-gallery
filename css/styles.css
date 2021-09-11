@@ -138,3 +138,33 @@ body {
 .lightbox__button:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.lightbox__slider-btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+  border: solid 2px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function);
+  outline: none;
+  /* background-image: url('../images/icon-close.svg'); */
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+.lightbox__slider-btn-forward {
+  right: 15px;
+}
+
+.lightbox__slider-btn-backward {
+  left: 15px;
+}

@@ -16,11 +16,24 @@
       Для того чтобы открыть, необходимо добавить на div.lightbox CSS-класс is-open
     -->
     <div class="lightbox js-lightbox">
-      <div class="lightbox__overlay"></div>
+      <div class="lightbox__overlay js-lightbox__overlay"></div>
 
       <div class="lightbox__content">
-        <img class="lightbox__image" src="" alt="" />
+        <img class="lightbox__image js-lightbox__image" src="" alt="" />
       </div>
+
+      <button
+      type="button"
+      class="lightbox__slider-btn lightbox__slider-btn-forward"
+      data-action="forward"
+      >
+      </button>
+
+      <button 
+      type="button" 
+      class="lightbox__slider-btn lightbox__slider-btn-backward" 
+      data-action="backward">
+      </button>
 
       <button
         type="button"
@@ -31,5 +44,6 @@
 
     <script src="./js/galleryMarkup.js" type="module"></script>
     <script src="./js/modal.js" type="module"></script>
+    <script src="./js/slider.js" type="module"></script>
   </body>
 </html>
