@@ -149,9 +149,9 @@ body {
   height: 35px;
   padding: 0;
   margin: 0;
-  border: solid 2px;
-  background-color: red;
-  color: #fff;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.5);
   cursor: pointer;
   transition: background-color var(--animation-duration) var(--timing-function);
   outline: none;
@@ -162,9 +162,17 @@ body {
 }
 
 .lightbox__slider-btn-forward {
-  right: 15px;
+  right: 30px;
+  background-image: url('../images/icon-arrow-forward.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }
 
 .lightbox__slider-btn-backward {
-  left: 15px;
+  left: 30px;
+  background-image: url('../images/icon-arrow-backward.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
 }

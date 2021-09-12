@@ -6,6 +6,30 @@ import refs from '../references/refs.js'
 refs.sliderForwardBtn.addEventListener('click', onSliderForwardBtnClick);
 refs.sliderBackwardBtn.addEventListener('click', onSliderBackwardBtnClick);
 
+function onSliderForwardBtnClick() {
+    const currentPictureNumber = findCurrentPictureNumber()
+    if (currentPictureNumber === galleryItems.length - 1) {
+        const nextPictureNumber = 0;
+        updateLightboxImageSrc(nextPictureNumber);
+        return
+    }
+
+    const nextPictureNumber = currentPictureNumber + 1;
+    updateLightboxImageSrc(nextPictureNumber);
+}
+
+function onSliderBackwardBtnClick() {
+    const currentPictureNumber = findCurrentPictureNumber()
+    if (currentPictureNumber === 0) {
+        const nextPictureNumber = galleryItems.length - 1;
+        updateLightboxImageSrc(nextPictureNumber)
+        return
+    }
+    
+    const nextPictureNumber = currentPictureNumber - 1;
+    updateLightboxImageSrc(nextPictureNumber)
+}
+
 function findCurrentPictureNumber() {
     let currentPictureIndex = 0;
     galleryItems.forEach((item, index) => {
@@ -16,12 +40,6 @@ function findCurrentPictureNumber() {
     return currentPictureIndex;
 }
 
-function onSliderForwardBtnClick() {
-    const nextPictureNumber = findCurrentPictureNumber() + 1;
-    refs.lightBoxImage.src = galleryItems[nextPictureNumber].original;
-}
-
-function onSliderBackwardBtnClick() {
-    const nextPictureNumber = findCurrentPictureNumber() - 1;
+function updateLightboxImageSrc(nextPictureNumber) {
     refs.lightBoxImage.src = galleryItems[nextPictureNumber].original;
 }
